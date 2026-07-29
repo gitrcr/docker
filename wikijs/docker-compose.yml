@@ -1,9 +1,18 @@
+networks:
+  net_public:
+    external: true
+    name: public
+    
 services:
   wiki:
     image: ghcr.io/requarks/wiki:2
+    hostname: wiki.domain.local
+    container_name: wiki
+    networks:
+      - public
 #    depends_on:
 #      - db
-    init: true
+#    init: true
     environment:
       DB_TYPE: postgres
       DB_HOST: db
@@ -14,3 +23,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:3000"
+    volumes:
+      - ./content:/wiki/data/content
+      - ./config.yml:/wiki/config.yml
+      - ./bck:/wiki/data/export
