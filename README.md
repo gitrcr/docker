@@ -13,4 +13,6 @@ https://github.com/docker/compose/releases/download/v5.3.1/docker-compose-linux-
 
 ## lazydocker
 
+https://github.com/jesseduffield/lazydocker/releases
+
 ## secrets
