@@ -1,7 +1,7 @@
 networks:
-  net_public:
+  vnet-ext:
     external: true
-    name: public
+    name: vnet-ext
     
 services:
   wiki:
@@ -9,7 +9,7 @@ services:
     hostname: wiki.domain.local
     container_name: wiki
     networks:
-      - public
+      - vnet-ext
 #    depends_on:
 #      - db
 #    init: true
