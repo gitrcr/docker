@@ -1,3 +1,5 @@
+<style type="text/css">
+
 /* VARIABLE CSS*/
 :root {
 	--cover-font-family: system-ui, sans-serif;
@@ -452,3 +454,5 @@ html:has(#app.theme--dark) {
 		background-color: #fff !important;
 	}
 }
+
+</style>
