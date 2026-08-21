@@ -8,4 +8,8 @@ sysctl vm.swappiness
 ```bash
 VERSION_STRING=5:29.7.2-1~debian.13~trixie
 sudo apt install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
+
+wget https://github.com/docker/compose/releases/download/v5.5.0/docker-compose-linux-x86_64
+chmod +x ./docker-compose-linux-x86_64
+sudo mv ./docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 ```
